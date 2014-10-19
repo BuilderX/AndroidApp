@@ -2,56 +2,74 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffffff"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity" 
+    tools:context=".MainActivity" >
 
-    android:background="#ffffff">
-
-    <LinearLayout 
-        android:orientation="vertical"
+    <LinearLayout
+        android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:padding="10dp"
-        >
+        android:orientation="vertical"
+        android:padding="10dp" >
 
-        <EditText 
+        <EditText
             android:id="@+id/etEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp"
             android:hint="@string/Email"
             android:inputType="@string/textEmail"
-            android:textColorHint="#bbbbbb"/>
-        <EditText 
-                android:id="@+id/etUserName"
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:layout_marginTop="-2dp"
             android:padding="10dp"
-            android:hint="@string/User_Name"
             android:textColorHint="#bbbbbb" />
-        <EditText 
+
+        <EditText
+            android:id="@+id/etUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-2dp"
+            android:hint="@string/User_Name"
+            android:padding="10dp"
+            android:textColorHint="#bbbbbb" />
+
+        <EditText
             android:id="@+id/etPass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="-2dp"
-            android:padding="10dp"
             android:hint="@string/Password"
-            android:textColorHint="#bbbbbb"
-            android:inputType=""/>
-        <Button 
-               android:id="@+id/btnSingIn"
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
             android:padding="10dp"
+            android:textColorHint="#bbbbbb" />
+
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="232dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="-2dp"
+            android:ems="10"
+            android:inputType="phone"
+            android:padding="10dp"
+            android:text="@string/Phone_Number"
+            android:textColorHint="#bbbbbb" >
+
+            <requestFocus />
+        </EditText>
+
+        <Button
+            android:id="@+id/btnSingIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_margin="4dp"
-               android:text="@string/Sign_Up"
-           />
-        </LinearLayout>
+            android:padding="10dp"
+            android:text="@string/Sign_Up" />
+        
+    </LinearLayout>
+
+    
 
 </RelativeLayout>
-
